@@ -1,5 +1,7 @@
 #head {
 	color: rgb(255,0,0);
 	font-Size:25px;
-	position: center;
+}
+ #head:hover {
+	color: rgb(0,0,255); 
 }
