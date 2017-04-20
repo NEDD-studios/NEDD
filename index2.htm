@@ -1,0 +1,46 @@
+<!doctype HTML>
+<html>
+<head>
+<title>Guard Smash-NEDD-studios</title>
+</head>
+<body>
+<h1>Welcome to Guard Smash on NEDD studios</h1>
+<h3>Guard Smash</h3>
+<p align="center"> 
+      <canvas id="mycanvas"></canvas> 
+    </p>
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+        
+        // ProgramCodeGoesHere
+       background(225,1);
+       background(0, 0, 0);
+fill(255, 255, 255);
+textSize(66);
+text("Guard",107, 71);
+text("Smash",93, 130);
+rect(137, 155, 128, 63);
+fill(0, 0, 0);
+textSize(43);
+text("Play" ,152, 198);
+fill(255, 255, 255);
+rect(137, 236, 128, 63);
+fill(5, 5, 5);
+text("Help" ,152, 286);
+
+    }};
+
+   
+    var canvas = document.getElementById("mycanvas"); 
+   
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
+</body>
+</html>
