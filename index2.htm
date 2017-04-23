@@ -20,19 +20,84 @@
         // ProgramCodeGoesHere
        background(225,1);
        background(0, 0, 0);
-fill(255, 255, 255);
-textSize(66);         
-text("Guard",107, 71);         
-text("Smash",93, 130);
-rect(137, 155, 128, 63);
-fill(0, 0, 0);
-textSize(43);         
-text("Play" ,152, 198);
-fill(255, 255, 255);
-rect(137, 236, 128, 63);
-fill(5, 5, 5);
-text("Help" ,152, 286);
+var scene = "start";
+var helpMenu = function () {
+    background(0, 0, 0);
+    fill(255, 255, 255);
+    textSize(15);
+    text("Use the arrow keys to move and the space bar to shoot.",18,55);
+    text("Shoot guards to get key cards and new guns",58,103);
+    textSize(48);
+    text("HAVE FUN!",67,271);
+    noStroke();
+    rect(111,286,159,100);
+    fill(0,0,0);
+    textSize(19);
+    text("Back to menu",133,342);
+};
+var title = function() {
+    background(0, 0, 0);
+    fill(255, 255, 255);
+    textSize(66);
+    text("Guard",107, 71);
+    text("Smash",93, 130);
+    rect(137, 155, 128, 63);
+    fill(0, 0, 0);
+    textSize(43);
+    text("Play" ,152, 198);
+    fill(255, 255, 255);
+    rect(137, 236, 128, 63);
+    fill(5, 5, 5);
+    text("Help" ,152, 286);
+};
+var start= function() {
+    background(255);
+    var textX = 46;
+    textSize(45);
+    fill(0, 0, 0);
+    text("NEDD studios...", textX,200);
+    print(textX);
+    textSize(15);
+    text("click!",181,345);
+};
+var play = function() {
+    background(240, 240, 128);
+    fill(0);
+    textSize(61);
+    text('PLAY SCENE', 5, 200);
+    textSize(15);
+    text("click!",181,345);
+};
 
+draw = function() {
+    if (scene === 'start') {
+        start();
+    } else if (scene === 'title') {
+        title();
+    } else if (scene === 'helpMenu') {
+        helpMenu();
+    } else if (scene === 'play') {
+        play();
+    }
+};
+
+mouseClicked = function () {
+    if (scene === 'start') {
+        scene = 'title';
+    } else if (scene === 'title') {
+        if (mouseX > 137 && mouseX < 265 && mouseY > 236 && mouseY < 299) {
+            scene = 'helpMenu';
+        } else if (mouseX > 137 && mouseX < 265 && mouseY > 155 && mouseY < 218) {
+            scene = 'play';
+        }
+    } else if (scene === 'helpMenu') {
+        if (mouseX > 110 && mouseX < 271 && mouseY > 286 && mouseY < 386) {
+            scene = 'title';
+        }
+    } else if (scene === 'play') {
+        scene = 'title';
+    }
+};
     }};
 
    
