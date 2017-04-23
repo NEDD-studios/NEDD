@@ -5,3 +5,12 @@
  #head:hover {
 	color: rgb(0,0,225); 
 }
+centron_link{
+color: red;	
+}
+active:centron_link{
+color: yellow;	
+}
+hover:centron_link{
+color: green;	
+}
