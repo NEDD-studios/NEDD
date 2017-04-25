@@ -1,6 +1,9 @@
 #head {
 	color: rgb(255,0,0);
 	font-Size:25px;
+	text-align: center;
+	font-style: serif;
+	text-decoration: Bold;
 }
  #head:hover {
 	color: rgb(0,0,225); 
