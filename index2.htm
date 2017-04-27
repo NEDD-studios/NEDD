@@ -18,9 +18,7 @@
         frameRate(30);
         
         // ProgramCodeGoesHere
-       background(225,1);
-       background(0, 0, 0);
-var scene = "start";
+       var scene = "start";
 var helpMenu = function () {
     background(0, 0, 0);
     fill(255, 255, 255);
@@ -61,10 +59,22 @@ var start= function() {
     text("click!",181,345);
 };
 var play = function() {
-    background(105,105,105);
-      fill(0,0,0);
-      rect(350,375,25,50);
-      
+    background(110, 110, 110);
+    var y=-21;
+    var x = -1;
+    var stone = function (){
+        image(getImage("cute/RampSouth"),x,y,50,70);
+        
+    };
+    for(x=-1;x===400&&y===400;x+50) {
+     y=y+70;
+     stone();
+    }
+    rect(331,313,68,89);
+
+
+    
+    
 };
 
 draw = function() {
@@ -77,6 +87,25 @@ draw = function() {
     } else if (scene === 'play') {
         play();
     }
+};
+
+mouseClicked = function () {
+    if (scene === 'start') {
+        scene = 'title';
+    } else if (scene === 'title') {
+        if (mouseX > 137 && mouseX < 265 && mouseY > 236 && mouseY < 299) {
+            scene = 'helpMenu';
+        } else if (mouseX > 137 && mouseX < 265 && mouseY > 155 && mouseY < 218) {
+            scene = 'play';
+        }
+    } else if (scene === 'helpMenu') {
+        if (mouseX > 110 && mouseX < 271 && mouseY > 286 && mouseY < 386) {
+            scene = 'title';
+        }
+    } else if (scene === 'play') {
+        scene = 'title';
+    }
+};
 };
 
 mouseClicked = function () {
