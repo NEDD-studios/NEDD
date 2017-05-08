@@ -14,13 +14,13 @@ body, html {
 	color: rgb(0,0,225); 
 }
 centron_link{
-color: red;	
+color: lime;	
 }
 active:centron_link{
-color: yellow;	
+color: lime;	
 }
 hover:centron_link{
-color: green;	
+color: lime;	
 }
 img{
 width: 100%;
