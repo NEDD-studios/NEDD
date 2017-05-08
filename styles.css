@@ -1,3 +1,8 @@
+body, html {
+	background: #777;
+	margin: 0;
+}
+
 #head {
 	color: rgb(255,0,0);
 	font-Size:25px;
