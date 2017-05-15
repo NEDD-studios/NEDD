@@ -13,15 +13,6 @@ body, html {
  #head:hover {
 	color: rgb(0,0,225); 
 }
-centron_link{
-color: lime;	
-}
-active:centron_link{
-color: lime;	
-}
-hover:centron_link{
-color: lime;	
-}
 img{
 width: 100%;
 }
